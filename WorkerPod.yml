@@ -1,0 +1,18 @@
+---
+kind: Pod
+spec:
+  containers:
+    - name: jenkins-63558
+      image: alpine:latest
+      imagePullPolicy: IfNotPresent
+      env:
+        - name: DOCKER_HOST
+          value: tcp://localhost:2375
+      tty: true
+      resources:
+        requests:
+          memory: "128Mi"
+          cpu: "500m"
+        limits:
+          memory: "256Mi"
+          cpu: "1000m"
