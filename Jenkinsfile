@@ -14,7 +14,7 @@ pipeline {
 
         stage('Check Jenkinsfile branch') {
             steps {
-                echo 'Jenkinsfile readed from master branch...'
+                echo 'Jenkinsfile read from master branch...'
                 echo "${params.BRANCH}"
             }
         }
